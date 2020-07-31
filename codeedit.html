@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Pikachu Editor database UPDATE</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
+<script>
+var config={
+apiKey: "AIzaSyA0Ev9fcpk8Qx_JH0plhtOOGhLZwtC3mrQ",
+authDomain: "text-gfb.firebaseapp.com",
+databaseURL: "https://text-gfb.firebaseio.com",
+projectId: "text-gfb",
+storageBucket: "text-gfb.appspot.com",
+messagingSenderId: "294811654536",
+appId: "1:294811654536:web:aba2160be19ba6a94e023d",
+measurementId: "G-SS772Y22JH"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(config);
+  var db=firebase.firestore();
+</script>
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+body {
+font-family:sans-serif;
+font-weight:400;
+line-height:1.5;
+font-size:1px;
+color:#555;
+background:#fddede;
+}
+#fname{
+    display:inline;
+    font-size:20px;
+    background:gold;
+    margin-left:0px;
+    color:#f0ffff;
+}
+body.dark {
+ background:#333;
+ color:#fff;
+}
+button {
+outline:none;
+border:none;
+padding:6px;
+background:#fff;
+color:#309fff;
+margin:5px;
+transition:300ms ease;
+}
+.toolbar {
+ background:#fff;
+ padding:6px 15px;
+}
+.toolbar button {
+ color:#fff;
+ background:#309fff;
+ padding:7px;
+}
+textarea {
+resize:none;
+font-family:sans-serif;
+height:auto;
+min-height:400px;
+width:90%;
+background:#fff;
+outline:none;
+padding:15px;
+font-size:16px;
+border:1px solid #309fff;
+}
+main {
+ padding:15px;
+ display:grid;
+ grid-template-columns:1fr 3fr;
+}
+select {
+width:70px;
+outline:none;
+background:#fff;
+border:1px solid #309fff;
+color:#555;
+padding:5px;
+}
+.select {
+ display:inline-block;
+ padding-left:5px;
+}
+#tbr {
+ background:#fff;
+}
+#tbr button {
+ border:1px solid #309fff;
+}
+#tbr button:hover {
+ background:#309fff;
+ color:#fff;
+}
+.box {
+ background:#fff;
+ padding:15px;
+ font-size:16px;
+ margin:15px;
+}
+body.dark .toolbar ,
+body.dark textarea ,
+body.dark #tbr ,
+body.dark .box {
+ background:#000;
+ color:#fff;
+}
+body.dark #tbr button , 
+body.dark select {
+color:#ccc;
+background:#333;
+}
+</style>
+</head>
+ <body class="dark">
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  <div id="tb" class="toolbar" >
+     <button id="hs" class="hid">OUTPUT</button>
+     <button onclick="addelm('style',1)">style</button>
+     <button onclick="addelm('script',1)">script</button>
+     <button id="copy" onclick="cpy()">COPY</button>
+     <button id="help" onclick="howto()">help?</button>
+     <button onclick="darkMode()">light Mode</button>
+     <button onclick='delt()'>DELETE</button>
+     <button onclick='savetodb()'>SAVE</button>
+     <div id="fname"></div>
+  </div>
+  <main>
+  <div id="tbr">
+   <button onclick="addelm('()',2)">()</button>
+   <button onclick="addelm(o,2)"><></button>
+   <button onclick="addelm(e,2)">/></button>
+   <button onclick="addelm('{}',2)">{}</button>
+   <button onclick=addelm('""',2)>""</button>
+   <button onclick=addelm("''",2)>''</button>
+   <button onclick="addelm('.',5)">.</button>
+   <button onclick="addelm(':',5)">;</button>
+   <button onclick="addelm(';',5)">;</button>
+   <div id="tbc" class="select" >
+     <select id="tbsel" oninput="toolbar()">
+        <option value="html" selected>HTML</option>
+        <option value="css">CSS</option>    
+     </select> 
+   <div>
+     <button onclick="addelm('src',0)">src</button>
+     <button onclick="addelm('href',0)">href</button>
+   </div>
+  </div>
+ </div>
+ <div>
+  <textarea id="pikachu" class="box">
+   <!DOCTYPE html>
+   <html>
+   <head>
+   <title>Document</title>
+   </head>
+   <body>
+     <h3>Enter Your code here</h3>
+   </body>
+   </html>
+ </textarea>
+ <div id="pika" class="box">
+   </div>
+ </div>
+ </main>
+   <div id="sno"></div>
+   <div id="id"></div>
+    <script>
+   function cur_dat(){
+var t=new Date;
+e=t.getDate();
+n=t.getMonth()+1;
+i=t.getMinutes();
+l=t.getHours();
+a=t.getSeconds();
+return""+e+"/"+n+"/2020  "+l+":"+i+":"+a;
+}
+    function darkMode(){
+     $("body").toggleClass("dark");
+   }   
+   var o="<>";
+   var e="</>"
+   $.fn.selectRange = function(start, end) { if(end === undefined){end = start;} 
+   return this.each(function() { if('selectionStart' in this) { this.selectionStart = start; this.selectionEnd = end; } else if(this.setSelectionRange) {this.setSelectionRange(start, end);}else if(this.createTextRange) {var range = this.createTextRange(); range.collapse(true); range.moveEnd('character', end); range.moveStart('character', start); range.select(); } }); };
+   
+   $(document).ready(function(){$("#pikachu").selectRange(122).focus();
+   $("#pika").html($("#pikachu").val())
+   $("#pikachu").on("input",function(e){
+   $("#pika").html($("#pikachu").val())
+   
+  
+   })
+   $("#hs").click(function(){
+   if($("#hs").attr("class")=="hid"){
+   $("#hs").attr("class","sho")
+   $("#hs").html("INPUT")
+   $("#pikachu").fadeOut("slow")
+   }else{
+   $("#hs").attr("class","hid")
+   $("#hs").html("OUTPUT")
+   $("#pikachu").fadeIn("slow")
+   }
+   })
+   })
+   function addelm(s,b,atr=""){
+   var cursorPos = $('#pikachu').prop('selectionStart');
+   var v = $('#pikachu').val(); 
+   var textBefore = v.substring(0, cursorPos);
+   var textAfter = v.substring(cursorPos, v.length);
+   if(b==1){
+   //tag name
+   $('#pikachu').val(textBefore +"<"+s+atr+"></"+s+">"+ textAfter).selectRange(cursorPos+s.length+2).focus();}
+   else if(b==2){
+   //2 digit number
+   $('#pikachu').val(textBefore+s+ textAfter).selectRange(cursorPos+s.length-1).focus();
+   }
+   else if(b==3){
+   //then css
+   $('#pikachu').val(textBefore+s+":;"+ textAfter).selectRange(cursorPos+s.length+1).focus();
+   }else if(b==4){
+   //function
+   $('#pikachu').val(textBefore+s+"()"+ textAfter).selectRange(cursorPos+s.length+1).focus();
+   }else if(b==5){
+   //1 digit or 
+   $('#pikachu').val(textBefore+s+ textAfter).selectRange(cursorPos+s.length).focus();
+   }
+   else{
+   //attributes
+   $('#pikachu').val(textBefore +s+'=""'+ textAfter).selectRange(cursorPos+s.length+2).focus();
+   
+   }
+   //$("#pikachu").focus();
+   };
+   function chng(){
+   $("#pikachu").css("opacity",$("#opa").val()/100)
+   }
+   chng();
+   function cpy(){
+   textAreaEle = document.getElementById("pikachu");
+   textAreaEle.focus();
+   textAreaEle.select();
+   try {
+   document.execCommand('copy');
+   } catch (err) {
+   console.log("Error,unable to copy.");
+   } 
+   }
+   
+   function but(afclk,name){
+   return '<button onclick="addelm'+"("+afclk+")"+'">'+name+'</button>';
+   }
+   function tag(nam){
+   return "<"+nam+"></"+nam+">";
+   }
+   
+   function toolbar(){
+   var a=$("#tbsel").val();
+   if(a=="css"){
+   var dts=but("'background',3","BG");
+   dts += but("'color',3","COLOR");
+   dts +=but("'border',3","border");
+   dts +=but("'font-family',3","font-fam");
+   dts +=but("'display',3","DISPLAY");
+   dts +=but("'opacity',3","opacity")
+   dts +=but("'transform',3","transform")
+   dts +=but("'height',3","HEIGHT")
+   dts +=but("'width',3","WIDTH")
+   dts +=but("'font-size',3","font-size")
+   dts +=but("'position',3","position")
+   dts +=but("'top',3","top")
+   dts +=but("'left',3","left")
+   dts +=but("'bottom',3","bottom")
+   dts +=but("'right',3","right")
+   dts +=but("'transform',3","transform")
+   dts +=but("'translate',4","translate")
+   dts +=but("'scale',4","scale")
+   dts +=but("'skew',4","skew")
+   dts +=but("'rotate',4","rotate")
+   dts +=but("'animation',3","animation")
+   
+   $("#tbc div").html(dts)
+   }else if(a=="js"){
+   var dts="";
+   dts +=but("'background',4","BG")
+   dts +=but("'background',4","BG")
+   dts +=but("'background',4","BG")
+   dts +=but("'background',4","BG")
+   dts +=but("'background',4","BG")
+   dts +=but("'background',4","BG")
+   dts +=but("'background',4","BG")
+   dts +=but("'background',4","BG")
+   
+   $("#tbc div").html(dts)
+   }
+   else if(a=="html"){
+   var dts=but("'div',1","DIV");
+   dts +=but("'p',1","P")
+   dts +=but("'marquee',1","MARQUEE")
+   dts +=but("'span',1","SPAN")
+   dts +=but("'id',0","ID")
+   dts +=but("'class',0","CLASS")
+   dts +=but("'h1',1","H1")
+   dts +=but("'h2',1","H2")
+   dts +=but("'h3',1","H3")
+   dts +=but("'h4',1","H4")
+   dts +=but("'h5',1","H5")
+   dts +=but("'h6',1","H6")
+   dts +=but("'iframe',1","IFRAME")
+   dts +=but("'img',1","IMG")
+   dts +=but("'table',1","TABLE")
+   dts +=but("'form',1","FORM")
+   dts +=but("'svg',1","SVG")
+   
+   
+   $("#tbc div").html(dts)
+   }
+   }
+   setTimeout(function(){
+   toolbar("html")
+   },10)
+   function lod(){
+db.collection("mod").where("user","==",navigator.userAgent).get().then(function(d){
+
+   $.each(d.docs,function(k,v){
+    if(v.data().code !== "undefined"){
+    $("#sno").html(k+1);
+    $("#id").html(v.id);
+    $("#fname").html(v.data().name);
+    $("#pikachu").val(v.data().code);
+     //console.log(JSON.stringify(v.data()))
+      $("#pika").html($("#pikachu").val())
+    }
+                })
+            })}
+            lod();
+function delt(){
+db.collection("mod").doc($("#id").html()).delete().then(function(){
+alert("deleted")
+});
+
+}
+function savetodb(){
+if($("#id").html()==""){
+   var cod=$("#pikachu").val(); db.collection("mod").add({sno:$("#sno").html(),user:navigator.userAgent,date:cur_dat(),name:prompt("enter file name")||"noname",code:cod}).then(function(){
+       alert("successfully saved code to our server\n\n\n\n\n\n\n\n\n")
+   })
+   lod();
+}else{
+     db.collection("mod").doc($("#id").html()).update({code:$("#pikachu").val(),name:prompt("Enter File Name",$("#fname").html())||"noname"}).then(function(){
+         alert("Code Updated")
+     })
+     lod();
+    
+    }
+}
+function howto(){
+var t2a="Main features of this code :\n1). Auto completion \n2). Light & dark mode \n3). Live output of codes. \n4). Saving and deleting codes to server \n5). Ready made tags for HTML \n6). Ready made properties of CSS \n7). Mostly used attributes can be written faster now \n8). 1 device one code at database😅\n\n\n There are many more thing you need to explore so now just go explore and enjoy my code";
+alert(t2a)
+alert("And special features of code :\n1). This code have many features");
+alert("Please if you really like this code then mention Some friends in comment box please😅")
+}
+howto();
+
+alert("You can save your code to our database and access anytime just open this code anytime");
+
+    </script>
+    </body>
+</html>

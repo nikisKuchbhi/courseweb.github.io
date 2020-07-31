@@ -1,0 +1,1240 @@
+<html>
+
+    <head>
+        <title>What you MUST know about HTML after fundamentals course</title>
+    </head>
+
+    <body>
+
+        <table border=1>
+        <!-- 4 columns, lots of rows ! -->
+
+            <tr align=center bgcolor=#FFFF00>
+                <td width=10%><b>Tag</b></td>
+                <td width=40%><b>Description</b></td>
+                <td width=40%><b>Syntax</b></td>
+                <td width=10%><b>Possible attributes</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>&lt;!-- --&gt;</b></td>
+                <td>Defines a comment</td>
+                <td><b>&lt;!--</b> Your comment <b>--&gt;</b> wherever you want</td>
+                <td></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>&lt;!DOCTYPE&gt;</b></td>
+                <td>Defines the document type</td>
+                <td><b>&lt;!DOCTYPE&gt;</b> at the very beginning</td>
+                <td><b>html</b> to declare <b>HTML5</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>html</b></td>
+                <td>Defines the beginning and the end of the document</td>
+                <td><b>&lt;html&gt;</b> after <b>&lt;!DOCTYPE&gt;</b> declaration, <b>&lt;/html&gt;</b> at the very end</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td colspan=4><br></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>head</b></td>
+                <td>Contains all the non-visual elements</td>
+                <td><b>&lt;head&gt;</b> after <b>&lt;html&gt;</b>, <b>&lt;/head&gt;</b> before the <b>body</b></td>
+                <td></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>title</b></td>
+                <td>Defines the title of the page, describing it<br>Is used by search engines</td>
+                <td><b>&lt;title&gt;</b>Your title<b>&lt;/title&gt;</b> in the <b>head</b></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td colspan=4><br></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>body</b></td>
+                <td>Contains all the visual-structural elements</td>
+                <td><b>&lt;body&gt;</b> after the <b>head</b>, <b>&lt;/body&gt;</b> before <b>&lt;/html&gt;</b></td>
+                <td><b>bgcolor</b>, <b>align</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>a</b></td>
+                <td>Defines an hyperlink</td>
+                <td>
+                  <b>&lt;a href="Some URL" target=_blank&gt;Text to click to be redirected&lt;/a&gt;</b><br>
+                  <a href="Some URL" target=_blank>Text to click to be redirected</a>
+                </td>
+                <td><b>href</b>, <b>target</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>&lt;animate&gt;<br><font color=#0000FF>(NEW IN HTML5)</font></b></td>
+                <td>Creates a SVG animation</td>
+                <td>
+                    <b>&lt;svg width=100px height=20px&gt;<br>
+                    &lt;rect width=20px height=20px fill=green&gt;<br>
+                    &lt;animate attributeName=x from=-20 to=100 dur=3s fill=remove repeatCount=indefinite&gt;&lt;/animate&gt;<br>
+                    &lt;/rect&gt;<br>
+                    &lt;/svg&gt;</b><br>
+                  <svg width=100px height=20px><rect width=20px height=20px fill=green><animate attributeName=x from=-20 to=100 dur=3s fill=remove repeatCount=indefinite></animate></rect></svg>
+                </td>
+                <td><b>attributeName</b>, <b>from</b>, <b>to</b>, <b>dur</b>, <b>fill</b>, <b>repeatCount</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>article<br><font color=#0000FF>(NEW IN HTML5)</font></b></td>
+                <td>Main container of content of the web page, is intended to replace <b>&lt;div&gt;</b></td>
+                <td><b>&lt;article&gt;</b><article>Your article content</article><b>&lt;/article&gt;</b></td>
+                <td></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>aside<br><font color=#0000FF>(NEW IN HTML5)</font></b></td>
+                <td>
+                  Defines a secondary or tangenial content like sidebars<br>
+                  Usually separated from content but indirectly related to it</td>
+                <td><b>&lt;aside&gt;</b><aside>Your aside content</aside><b>&lt;/aside&gt;</b></td>
+                <td></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>audio (API)<br><font color=#0000FF>(NEW IN HTML5)</font></b></td>
+                <td>Specifies a standard for embedding audio in a web page</td>
+                <td>
+                  2 ways are used :<br>
+                  <b>&lt;audio src="Some audio source" controls&gt;&lt;/audio&gt;</b><br>
+                  <b>&lt;audio controls&gt;&lt;source src="Some audio source"&gt;&lt;/audio&gt;</b><br>
+                  <audio controls><source src="Some audio source">Alternative text</audio>
+                </td>
+                <td><b>src (MP3, WAV, OGG)</b>, <b>controls</b>, <b>autoplay</b>, <b>loop</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>b</b></td>
+                <td>Makes the text bold</td>
+                <td><b>&lt;b&gt;</b><b>Your bold text<b></b>&lt;/b&gt;</b></td>
+                <td></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>big</b></td>
+                <td>Makes the text bigger</td>
+                <td><b>&lt;big&gt;</b><big>Your bigger text</big><b>&lt;/big&gt;</b></td>
+                <td></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>&lt;br&gt;</b></td>
+                <td>Adds a single line break without starting a new paragraph</td>
+                <td>Insert <b>&lt;br&gt;</b><br>before your line break</td>
+                <td></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>canvas<br><font color=#0000FF>(NEW IN HTML5)</font></b></td>
+                <td>Used to draw with <b>Javascript</b>, pixel-based</td>
+                <td>
+                  <b>&lt;canvas id="Canvas name" width=20px height=20px&gt;&lt;/canvas&gt;</b>
+                </td>
+                <td><b>id</b>, <b>width</b>, <b>height</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>circle<br><font color=#0000FF>(NEW IN HTML5)</font></b></td>
+                <td>Creates a SVG circle</td>
+                <td>
+                  <b>&lt;svg height=20px width=20px&gt;&lt;circle cx=10 cy=10 r=10 fill=green stroke=black&gt;&lt;/circle&gt;&lt;/svg&gt;</b><br>
+                  <svg height=22px width=22px><circle cx=11 cy=11 r=10 fill=green stroke=black></circle></svg>
+                </td>
+                <td><b>cx</b>, <b>cy</b>, <b>r</b>, <b>fill</b>, <b>stroke</b>, <b>style</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>datalist<br><font color=#0000FF>(NEW IN HTML5)</font></b></td>
+                <td>Defines a list of pre-defined options for a search field</td>
+                <td><input id="A list" type=text list="A drop-down list"><datalist id="A drop-down list"><option value="Option 1"><option value="Option 2"></datalist></td>
+                <td><b>id</b> (<b>Note</b> : <b>&lt;input&gt;</b> and <b>datalist</b> must have the same id)</td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>del</b></td>
+                <td>Defines deleted text (<b>Note</b> : appears with a line through)</td>
+                <td><b>&lt;del&gt;</b><del>Your deleted text</del><b>&lt;/del&gt;</b></td>
+                <td></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>div</b></td>
+                <td>Block-level section that is used as a container of other <b>HTML</b> elements</td>
+                <td>
+                  <b>&lt;div &gt;One element here &lt;p&gt;Other &lt;b&gt;element&lt;/b&gt; here&lt;/p&gt;&lt;/div&gt;</b><br>
+                  <div>One element here <p>Other <b>element</b> here</p></div>
+                </td>
+                <td><b>style</b>, <b>align</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>ellipse<br><font color=#0000FF>(NEW IN HTML5)</font></b></td>
+                <td>Creates a SVG ellipse</td>
+                <td>
+                  <b>&lt;svg width=20px height=20px&gt;&lt;ellipse cx=10 cy=10 rx=10 ry= fill=green&gt;&lt;/ellipse&gt;&lt;/svg&gt;</b><br>
+                  <svg width=20px height=20px><ellipse cx=10 cy=10 rx=10 ry=5 fill=green></ellipse></svg>
+                </td>
+                <td></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>em</b></td>
+                <td>Defines important text (<b>Note</b> : looks italic, used by search engines)</td>
+                <td><b>&lt;em&gt;</b><em>Your emphasized text</em><b>&lt;/em&gt;</b></td>
+                <td></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>font</b></td>
+                <td>Creates an inline styling of text</td>
+                <td><b>&lt;font color=#FF0000&gt;</b><font color=#FF0000>Some red text</font><b>&lt;/font&gt;</b></td>
+                <td><b>color</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>footer<br><font color=#0000FF>(NEW IN HTML5)</font></b></td>
+                <td>
+                  Defines a footer in the <b>&lt;body&gt;</b><br>
+                  Refers to a location at the very bottom of the document<br>
+                  Usually provides : <b>Contact Information</b>, <b>Privacy Policy</b>, <b>Social Media Icons</b>, <b>Terms of Service</b>, <b>Copyright Information</b>, <b>Sitemap and Related Documents</b>
+                </td>
+                <td><b>&lt;footer&gt;</b><footer>Your footer content</footer><b>&lt;/footer&gt;</b></td>
+                <td></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>form</b></td>
+                <td>Used to collect information from user</td>
+                <td>
+                  <b>&lt;form action="Some URL" method=POST&gt;&lt;input&gt;&lt;/form&gt;</b><br>
+                  <form action="Some URL" method=POST><input></form>
+                </td>
+                <td><b>action</b>, <b>method</b>, <b>autocomplete</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>&lt;frame&gt;<br><font color=#FF0000>(NOT IN HTML5)</font></b></td>
+                <td>Defines one specific window</td>
+                <td><b>&lt;frame src="Some URL" noresize=noresize&gt;</b></td>
+                <td><b>noresize</b>, <b>src</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>frameset<br><font color=#FF0000>(NOT IN HTML5)</font></b></td>
+                <td>Defines a space to create frames</td>
+                <td><b>&lt;frameset cols="25%,50%,25%"&gt;&lt;frame&gt;&lt;/frameset&gt;</b></td>
+                <td><b>cols</b>, <b>rows</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>h1</b> - <b>h6</b></td>
+                <td>Defines headings (<b>Note</b> : makes the text bigger and bold, used by search engines)</td>
+                <td>
+                  <h1><b>&lt;h1&gt;</b>Your heading 1<b>&lt;/h1&gt;</b></h1>
+                  <h6><b>&lt;h6&gt;</b>Your heading 6<b>&lt;/h6&gt;</b></h6>
+                </td>
+                <td></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>header<br><font color=#0000FF>(NEW IN HTML5)</font></b></td>
+                <td>
+                  Defines a header in the <b>&lt;body&gt;</b><br>
+                  Completely different from the <b>&lt;head&gt;</b>
+                </td>
+                <td><b>&lt;header&gt;</b><header>Your header content</header><b>&lt;/header&gt;</b></td>
+                <td></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>&lt;hr&gt;</b></td>
+                <td>Creates an horizontal line</td>
+                <td><b>&lt;hr width=50px&gt;</b><hr width=50px></td>
+                <td><b>width</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>i</b></td>
+                <td>Makes the text italic</td>
+                <td><b>&lt;i&gt;</b><i>Your italic text</i><b>&lt;/i&gt;</b></td>
+                <td></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>&lt;img&gt;</b></td>
+                <td>Inserts an image</td>
+                <td>
+                  <b>&lt;img src="Some image source" alt=404 height=20px width=50px border=2px&gt;</b><br>
+                  <img src="Some image source" alt=404 height=20px width=50px border=2px>
+                </td>
+                <td><b>src</b>, <b>alt</b>, <b>height</b>, <b>width</b>, <b>border</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>&lt;input&gt;</b></td>
+                <td>Creates a single element to collect an information from user</td>
+                <td>
+                  <b>&lt;input type=text name=text&gt;</b><br>
+                  <input type=text name="a text">
+                </td>
+                <td>
+                  <b>id</b>, <b>type</b>, <b>name</b>, <b>value</b>, <b>placeholder</b>, <b>autofocus</b>, <b>required</b>, <b>form</b> (don't understand either), <b>formaction</b>,<br>
+                  <b>formmethod</b>, <b>formenctype</b>, <b>formnovalidate</b>, <b>formtarget</b>, <b>height</b>, <b>width</b>, <b>list</b>, <b>min</b>, <b>max</b>,<br>
+                  <b>multiple</b>, <b>pattern (regexp)</b>, <b>step</b>
+                </td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>ins</b></td>
+                <td>Defines inserted text (<b>Note</b> : looks underlined)</td>
+                <td><b>&lt;ins&gt;</b><ins>Your inserted text</ins><b>&lt;/ins&gt;</b></td>
+                <td></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>li</b></td>
+                <td>Creates a list item</td>
+                <td>
+                  <b>&lt;li&gt;list item&lt;/li&gt;</b><br>
+                  <li>list item</li>
+                </td>
+                <td></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>line<br><font color=#0000FF>(NEW IN HTML5)</font></b></td>
+                <td>Creates a SVG line</td>
+                <td>
+                  <b>&lt;svg height=20px width=20px&gt;&lt;line x1=0 y1=0 x2=20 y2=20 stroke=black&gt;&lt;/line&gt;&lt;/svg&gt;</b><br><br>
+                  <svg height=20px width=20px><line x1=0 y1=0 x2=20 y2=20 stroke=black></line></svg>
+                </td>
+                <td><b>x1</b>, <b>x2</b>, <b>y1</b>, <b>y2</b>, <b>stroke</b>, <b>style</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>nav<br><font color=#0000FF>(NEW IN HTML5)</font></b></td>
+                <td>Creates a section of a document that links to other pages or to certain sections within the document</td>
+                <td><b>&lt;nav&gt;</b><nav>Your navigation links</nav><b>&lt;/nav&gt;</b></td>
+                <td></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>noframes<br><font color=#FF0000>(NOT IN HTML5)</font></b></td>
+                <td>Provides the ability to display the page if frames are not supported</td>
+                <td><b>&lt;noframes&gt;</b>Alternative text<b>&lt;/noframes&gt;</b></td>
+                <td></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>ol</b></td>
+                <td>Creates an ordered (numbered) list</td>
+                <td>
+                  <b>&lt;ol&gt;<br>&lt;li&gt;First list item&lt;/li&gt;<br>&lt;li&gt;Second list item&lt;/li&gt;<br>&lt;/ol&gt;</b><br>
+                  <ol><li>First list item</li><li>Second list item</li></ol>
+                </td>
+                <td></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>&lt;option&gt;</b></td>
+                <td>Defines the options in a drop-down list for the user to select</td>
+                <td>See datalist</td>
+                <td><b>value</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>p</b></td>
+                <td>Creates a paragraph</td>
+                <td><b>&lt;p align=right&gt;</b><p align=right>Your paragraph</p><b>&lt;/p&gt;</b></td>
+                <td><b>align</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>path<br><font color=#0000FF>(NEW IN HTML5)</font></b></td>
+                <td>Creates a SVG path drawing</td>
+                <td>
+                  <b>&lt;svg&gt; width=20px height=20px&gt;<br>
+                  &lt;path d="M00 L20 20 L0 20 L20 0 Z" stroke=#000000 fill=none&gt;&lt;/path&gt;<br>
+                  &lt;/svg&gt;</b><br><br>
+                  <svg width=20px height=20px><path d="M0 0 L20 20 L0 20 L20 0 Z" stroke=#000000 fill=none></path></svg>
+                </td>
+                <td><b>d</b>, <b>style</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>polygon<br><font color=#0000FF>(NEW IN HTML5)</font></b></td>
+                <td>Creates a SVG polygon</td>
+                <td>
+                  <b>&lt;svg width=20px height=20px&gt;&lt;polygon points="0 0, 10 20, 20 10" fill=green&gt;&lt;/polygon&gt;&lt;/svg&gt;</b><br><br>
+                  <svg width=20px height=20px><polygon points="0 0, 10 20, 20 10" fill=green></polygon></svg>
+                </td>
+                <td></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>polyline<br><font color=#0000FF>(NEW IN HTML5)</font></b></td>
+                <td>Creates multiple lines in a SVG</td>
+                <td>
+                  <b>&lt;svg width=20px height=20px&gt;&lt;polyline stroke=black fill=none points="0 0, 10 20, 20 0"&gt;&lt;/polyline&gt;&lt;/svg&gt;</b><br><br>
+                  <svg width=20px height=20px><polyline stroke=black fill=none points="0 0, 10 20, 20 0"></polyline></svg>
+                </td>
+                <td><b>stroke</b>, <b>fill</b>, <b>points</b>, <b>style</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>progress<br><font color=#0000FF>(NEW IN HTML5)</font></b></td>
+                <td>Creates a progress bar</td>
+                <td>
+                  <b>&lt;progress min="" max="" value=""&gt;&lt;/progress&gt;</b><br>
+                  <progress min="" max="" value=""></progress>
+                </td>
+                <td><b>min</b>, <b>max</b>, <b>value</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>rect<br><font color=#0000FF>(NEW IN HTML5)</font></b></td>
+                <td>Creates a SVG rectangle</td>
+                <td>
+                  <b>&lt;svg width=30px height=30px&gt;&lt;rect width=20pc height=10px x=10 y =10 fill=green&gt;&lt;/rect&gt;&lt;/svg&gt;</b><br><br>
+                  <svg width=30px height=30px><rect width=20px height=10px x=10 y=10 fill=green></rect></svg>
+                </td>
+                <td><b>height</b>, <b>width</b>, <b>x</b>, <b>y</b>, <b>fill</b>, <b>stroke</b>, <b>style</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>script</b></td>
+                <td>Creates a place to write <b>Javascript</b> in an <b>HTML</b> document</td>
+                <td><b>&lt;script&gt;</b>Some Javascript<b>&lt;/script&gt;</b></td>
+                <td><b>Javascript</b> (yes that blew my mind too)</td>
+            </tr>
+
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>section<br><font color=#0000FF>(NEW IN HTML5)</font></b></td>
+                <td>Defines a container that can be used to divide up content within an article</td>
+                <td><b>&lt;section&gt;</b><section>Your section content</section><b>&lt;/section&gt;</b></td>
+                <td></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>small</b></td>
+                <td>Makes the text smaller</td>
+                <td><b>&lt;small&gt;</b><small>Your smaller text</small><b>&lt;/small&gt;</b></td>
+                <td></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>&lt;source&gt;</b></td>
+                <td>
+                  Defines the source of a media like audio and video<br>
+                  Multiple sources can be linked to different media file, first recognized file will be used
+                </td>
+                <td>See <b>&lt;audio&gt;</b> tag</td>
+                <td><b>src</b>, <b>type</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>span</b></td>
+                <td>Inline section used as container of text, can be styled</td>
+                <td>
+                  <b>&lt;span style="CSS styling"&gt;</b><span style="CSS styling">Some inline text</span><b>&lt;/span&gt;</b><br>
+                </td>
+                <td><b>style</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>strong</b></td>
+                <td>Defines important text (<b>Note</b> : looks bold, used by search engines)</td>
+                <td><b>&lt;strong&gt;</b><strong>Your strong text</strong><b>&lt;/strong&gt;</b></td>
+                <td></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>sub</b></td>
+                <td>Makes the text subscripted</td>
+                <td><b>&lt;sub&gt;</b><sub>Your subscripted text</sub><b>&lt;/sub&gt;</b></td>
+                <td></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>sup</b></td>
+                <td>Makes the text superscripted</td>
+                <td><b>&lt;sup&gt;</b><sup>Your supercripted text</sup><b>&lt;sup&gt;</b></td>
+                <td></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>SVG<br><font color=#0000FF>(NEW IN HTML5)</font></b></td>
+                <td>
+                  <b>S</b>calable <b>V</b>ector <b>G</b>raphics, used to draw shapes with only <b>HTML</b><br>
+                  Vector-based, not pixel-based : the better the definition is, the better it looks like
+                </td>
+                <td>
+                  <b>Can be inserted as an image : &lt;img src="Some svg.svg" alt=404 height=20px&gt;</b><br>
+                  <img src="Some svg.svg" alt=404 height=20px><br>
+                  <b>Or as a SVG element : &lt;svg height=20px width=20px&gt;&lt;Some shape + attributes&gt;&lt;/svg&gt;</b><br>
+                  Shapes available : <b>circle</b>, <b>rect</b>, <b>line</b>, <b>polyline</b>, <b>polygon</b>, <b>ellipse</b>
+                </td>
+                <td><b>width</b>, <b>height</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>table</b></td>
+                <td>creates a table</td>
+                <td>
+                  <b>
+                    &lt;table border=1px&gt;<br>
+                    &lt;tr&gt;<br>
+                    &lt;td&gt;Table-&lt;/td&gt;<br>
+                    &lt;td&gt;-ception&lt;/td&gt;<br>
+                    &lt;/tr&gt;<br>
+                    &lt;/table&gt;<br>
+                  </b>
+                  <table border=1px>
+                    <tr>
+                      <td>Table-</td>
+                      <td>-ception</td>
+                    </tr>
+                  </table>
+                </td>
+                <td><b>border</b>, <b>align</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>td</b></td>
+                <td>Defines a table column</td>
+                <td>
+                  <b>
+                    &lt;table border=1px&gt;<br>
+                    &lt;tr&gt;<br>
+                    &lt;td&gt;Cell 1&lt;/td&gt;<br>
+                    &lt;td&gt;Cell 2&lt;/td&gt;<br>
+                    &lt;/tr&gt;<br>
+                    &lt;tr&gt;<br>
+                    &lt;td colspan=2&gt;Cell 3 and 4&lt;/td&gt;<br>
+                    &lt;/tr&gt;<br>
+                    &lt;/table&gt;<br>
+                  </b>
+                  <table border=1px>
+                    <tr>
+                      <td>Cell 1</td>
+                      <td>Cell 2</td>
+                    </tr>
+                    <tr>
+                      <td colspan=2>Cell 3 and 4</td>
+                    </tr>
+                  </table>
+                </td>
+                <td><b>colspan</b>, <b>rowspan</b>, <b>bgcolor</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>tr</b></td>
+                <td>Defines a table row</td>
+                <td>
+                  <b>
+                    &lt;table border=1px&gt;<br>
+                    &lt;tr&gt;<br>
+                    &lt;td&gt;Cell 1&lt;/td&gt;<br>
+                    &lt;td rowspan=2&gt;Cell 2 and 4&lt;/td&gt;<br>
+                    &lt;/tr&gt;<br>
+                    &lt;tr&gt;<br>
+                    &lt;td&gt;Cell 3&lt;/td&gt;<br>
+                    &lt;/tr&gt;<br>
+                    &lt;/table&gt;<br>
+                  </b>
+                  <table border=1px>
+                    <tr>
+                      <td>Cell 1</td>
+                      <td rowspan=2>Cell 2 and 4</td>
+                    </tr>
+                    <tr>
+                      <td>Cell 3</td>
+                    </tr>
+                  </table>
+                </td>
+                <td></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>ul</b></td>
+                <td>Creates an unordered (not numbered) list</td>
+                <td>
+                  <b>
+                    &lt;ul&gt;<br>
+                    &lt;li&gt;First list item&lt;/li&gt;<br>
+                    &lt;li&gt;Second list item&lt;/li&gt;<br>
+                    &lt;/ul&gt;<br>
+                  </b>
+                  <ul>
+                    <li>First list item</li>
+                    <li>Second list item</li>
+                  </ul>
+                </td>
+                <td></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>video (API)<br><font color=#0000FF>(NEW IN HTML5)</font></b></td>
+                <td>Specifies a standard for embedding video in a web page</td>
+                <td>
+                  2 ways are used :<br>
+                  <b>&lt;video src="Some video source" controls&gt;&lt;/video&gt;</b><br>
+                  <b>&lt;video controls&gt;&lt;source src="Some video source"&gt;&lt;/video&gt;</b><br>
+                  <video controls><source src="Some video source">Alternative text</video>
+                </td>
+                <td><b>src (MP4, WebM, OGG)</b>, <b>controls</b>, <b>autoplay</b>, <b>loop</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>Named but forgotten in this course :(</b></td>
+                <td colspan=3><b>details</b>, <b>embed</b>, <b>label</b>, <b>meta</b>, <b>output </b>, <b>textarea</b></td>
+            </tr>
+
+            <tr>
+                <td colspan=4><br></td>
+            </tr>
+
+            <tr align=center bgcolor=#FFFF00>
+                <td><b>Attributes</b></td>
+                <td colspan=2><b>Description</b></td>
+                <td><b>Possible Values</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>action</b></td>
+                <td colspan=2>Points to a webpage after the form is submitted</td>
+                <td><b>URL</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>align<br><font color=#FF0000>(NOT IN HTML5)</font></b></td>
+                <td colspan=2>Defines the alignment of an element</td>
+                <td><b>center</b>, <b>right</b>, <b>left</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>alt</b></td>
+                <td colspan=2>Defines an alternative text if img can't be loaded</td>
+                <td><b>text</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>attributeName</b></td>
+                <td colspan=2>Defines the attribute to modify in an animation</td>
+                <td><b>ANY attribute</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>autocomplete</b></td>
+                <td colspan=2>Specifies whether a form or input field should have autocomplete turned on or off</td>
+                <td>Guess what ? <b>on</b> or <b>off</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>autofocus</b></td>
+                <td colspan=2>
+                  Makes the input focussed when the form loads<br>
+                  (can be very annoying when automatic loading leads to this page and user wants to leave by typing a new adress)
+                </td>
+                <td></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>autoplay</b></td>
+                <td colspan=2>Specifies that the media should starts playing as soon as it is ready</td>
+                <td></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>bgcolor<br><font color=#FF0000>(NOT IN HTML5)</font></b></td>
+                <td colspan=2>Defines the background color of an element</td>
+                <td><b>color name</b>, <b>hexadecimal values</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>border</b></td>
+                <td colspan=2>Creates a border around an element and defines its width</td>
+                <td><b>px</b>, <b>%</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>charset</b></td>
+                <td colspan=2>Defines the character encoding</td>
+                <td><b>UTF-8</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>color<br><font color=#FF0000>(NOT IN HTML5)</font></b></td>
+                <td colspan=2>Defines the color of the text</td>
+                <td><b>color name</b>, <b>hexadecimal values</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>cols</b></td>
+                <td colspan=2>Defines the number of columns in a frameset</td>
+                <td><b>px</b>, <b>%</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>colspan</b></td>
+                <td colspan=2>Span columns in a table</td>
+                <td><b>number</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>controls</b></td>
+                <td colspan=2>
+                  Specifies that media controls should be displayed (like play or pause)<br>
+                  If used with <b>autoplay</b> nice way of creating a <b>VERY</b> annoying page (invisible music player, can't stop the music)
+                </td>
+                <td></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>cx</b></td>
+                <td colspan="2">
+                  Defines the horizontal relative coordinate of the radius of SVG circle / ellipse<br>
+                  Based on the top left corner of the SVG
+                </td>
+                <td><b>number</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>cy</b></td>
+                <td colspan="2">
+                  Defines the vertical relative coordinate of the radius of SVG circle / ellipse<br>
+                  Based on the top left corner of the SVG
+                </td>
+                <td><b>number</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>d</b></td>
+                <td colspan=2>Defines the coordinates of a path</td>
+                <td>
+                  <b>M</b> (first coordinate)<br>
+                  <b>L</b> (draw line)<br>
+                  <b>H</b> (horizontal line)<br>
+                  <b>V</b> (vertical line)<br>
+                  <b>C</b> (curve)<br>
+                  <b>S</b> (smooth curve)<br>
+                  <b>Q</b> (quadratic Bézier curve)<br>
+                  <b>T</b>(smooth quadratic Bézier curve)<br>
+                  <b>A</b> (elliptical arc)<br>
+                  <b>Z</b> (close path)
+                </td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>dur</b></td>
+                <td colspan=2>Defines the duration of an animation</td>
+                <td><b>number</b> (in seconds)</td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>fill</b></td>
+                <td colspan=2>
+                  In a SVG shape tag : defines the color to fill the SVG shape with<br>
+                  In <b>&lt;animate&gt;</b> : specifies if the attribute's value should be kept or reset to initial at the end of the animation
+                </td>
+                <td>
+                  <u>SVG shape</u> : <b>color name</b>, <b>hexadecimal values</b><br>
+                  <b><u>&lt;animate&gt;</u></b> : <b>remove</b>, <b>freeze</b>
+                </td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>from</b></td>
+                <td colspan=2>Defines the beginning value of attributeName in an animation</td>
+                <td>Value adapted to attribute (<b>number</b>, <b>color name</b>, ... etc)</td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>height</b></td>
+                <td colspan=2>Defines the height of an element</td>
+                <td><b>px</b>, <b>%</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>href</b></td>
+                <td colspan=2>Defines the adress of the linked document</td>
+                <td><b>URL</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>loop</b></td>
+                <td colspan=2>Specifies that the media should replay every time it is finished</td>
+                <td></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>max</b></td>
+                <td colspan=2>Defines the maximum value of a progress bar</td>
+                <td><b>number</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>method</b></td>
+                <td colspan=2>Specifies the HTTP method to be used when the form is submitted</td>
+                <td><b>GET</b>, <b>POST</b>, <b>PUT <font color=#0000FF>(NEW IN HTML5)</font></b>, <b>DELETE <font color=#0000FF>(NEW IN HTML5)</font></b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>min</b></td>
+                <td colspan=2>Defines the minimum value of a progress bar</td>
+                <td><b>number</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>name</b></td>
+                <td colspan=2>Defines the name of an element</td>
+                <td><b>text</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>noresize</b></td>
+                <td colspan=2>Specifies that a user can't resize the frame</td>
+                <td><b>noresize</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>placeholder</b></td>
+                <td colspan=2>Provides a hint to the user of what information to enter into the field</td>
+                <td><b>text</b> (yes, be creative)</td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>points</b></td>
+                <td colspan=2>
+                  Defines the differents relative coordinates of a SVG polyline / polygon<br>
+                  Based on the top left corner of the SVG<br>
+                  <b>Note</b> : each "x y" pairs are separated by a comma
+                </td>
+                <td><b>numbers</b> (as many as wanted, feel free)</td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>r</b></td>
+                <td colspan=2>Defines the radius of a SVG circle</td>
+                <td><b>number</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>repeatCount</b></td>
+                <td colspan=2>Specifies the repeat count of an animation</td>
+                <td><b>number</b>, <b>indefinite</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>required</b></td>
+                <td colspan=2>
+                  Used to make the input element required<br>
+                  Form will not be submitted without filling in the required fields
+                </td>
+                <td></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>rows</b></td>
+                <td colspan=2>Defines the number of rows in a frameset</td>
+                <td><b>px</b>, <b>%</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>rowspan</b></td>
+                <td colspan=2>Span rows in a table (<b>Note</b> : written in <b>td</b>)</td>
+                <td><b>number</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>rx</b></td>
+                <td colspan=2>Defines the horizontal axe of the radius of a SVG ellipse</td>
+                <td><b>number</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>ry</b></td>
+                <td colspan=2>Defines the vertical axe of the radius of a SVG ellipse</td>
+                <td><b>number</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>src</b></td>
+                <td colspan=2>Defines the location of an element</td>
+                <td><b>URL</b>, <b>name of a document</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>stroke</b></td>
+                <td colspan=2>Adds an outline to a SVG shape</td>
+                <td><b>color name</b>, <b>hexadecimal values</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>style</b></td>
+                <td colspan=2>Allows to define elements styling</td>
+                <td><b>CSS</b> (what a surprise ...)</td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>target</b></td>
+                <td colspan=2>Specifies where to open the linked document</td>
+                <td><b>_blank</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>to</b></td>
+                <td colspan=2>Defines the end value of attributeName in an animation</td>
+                <td>Value adapted to attribute (<b>number</b>, <b>color name</b>, ... etc)</td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>type</b></td>
+                <td colspan=2>Defines the type of an element</td>
+                <td><b>text</b>, <b>password</b>, <b>checkbox</b>, <b>radio</b>, <b>submit</b>, <b>email</b>, <b>search</b>, <b>URL</b>, <b>color</b>, <b>number</b>, <b>range</b>, <b>tel</b><br>
+                  <b>date</b>, <b>datetime</b>, <b>datetime-local</b>, <b>month</b>, <b>time</b>, <b>week</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>value</b></td>
+                <td colspan=2>Defines the value of an element</td>
+                <td>text, number</td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>width</b></td>
+                <td colspan=2>Defines the width of an element</td>
+                <td><b>px</b>, <b>%</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>x</b></td>
+                <td colspan=2>Defines the horizontal relative position of the top left corner of a SVG rectangle<br>
+                  Based on the top left corner of the SVG
+                </td>
+                <td><b>number</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>x1 / x2</b></td>
+                <td colspan=2>
+                  Defines the horizontal relative coordinates of the beginning and ending of a SVG line<br>
+                  Based on the top left corner of the SVG
+                </td>
+                <td><b>number</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>y</b></td>
+                <td colspan=2>
+                  Defines the vertical relative position of the top left corner of a SVG rectangle<br>
+                  Based on the top left corner of the SVG
+                </td>
+                <td><b>number</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>y1 / y2</b></td>
+                <td colspan=2>
+                  Defines the vertical relative coordinates of the beginning and ending of a SVG line<br>
+                  Based on the top left corner of the SVG
+                </td>
+                <td><b>number</b></td>
+            </tr>
+
+            <tr>
+                <td colspan=4><br></td>
+            </tr>
+
+            <tr align=center bgcolor=#FFFF00>
+                <td><b>Values</b></td>
+                <td colspan=3><b>Description</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>freeze</b></td>
+                <td colspan=3>Resets the value of attributeName at the end of the animation</td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>GET</b></td>
+                <td colspan=3>Method that makes the form data visible in the page address</td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>Hexadecimal colors</b></td>
+                <td colspan=3>
+                  Hexadecimal values : 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F (<b>A - F</b> are equivalent to 10 - 15 / <b>10</b> is equivalent to 16)<br>
+                  <b>HTML</b> colors are displayed in combinations of red, green, blue (RGB)<br>
+                  Colors are written like this : #RRGGBB (from 00 to FF which is 255)<br>
+                  Examples : #0000FF is <font color=#0000FF><b>blue</b></font>, #00FF00 is <font color=#00FF00><b>green</b></font>, #00FFFF is <font color=#00FFFF><b>cyan</b></font>
+                </td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>POST</b></td>
+                <td colspan=3>
+                  Method that makes the form data not visible in the page address<br>
+                  Used to update data and for sensitive informations like passwords
+                </td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>px</b></td>
+                <td colspan=3>Unit of distance in pixels, not the same as percentages</td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>remove</b></td>
+                <td colspan=3>Keeps the final value of attributeName at the end of the animation</td>
+            </tr>
+
+            <tr align=center>
+                <td align=center bgcolor=#00FF00><b>_blank</b></td>
+                <td colspan=3>Open linked document on a new tab / window</td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>%</b></td>
+                <td colspan=3>Unit of distance in percentages of block's display, not the same as pixels</td>
+            </tr>
+
+            <tr>
+                <td colspan=4><br></td>
+            </tr>
+
+            <tr align=center bgcolor=#FFFF00>
+                <td><b>API's<br><font color=#0000FF>(NEW IN HTML5)</font></b></td>
+                <td colspan=3><b>Description</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>Drag & Drop</b></td>
+                <td colspan=3>
+                  Used to let the user grab an object and drag it to a different location<br><br>
+                  Any <b>HTML</b> element can be draggable and it needs :<br>
+                  <b>Javascript</b> to write the events (<b>drag(event)</b>, <b>allowDrop(event)</b>, <b>drop(event)</b>)<br>
+                  <b>HTML</b> attributes to set :<br>
+                  An element to accept to be dragged (<b>draggable</b> to true, <b>ondragstart</b> to <b>drag(event)</b>)<br>
+                  An element to accept a drop (<b>ondragover</b> to <b>allowDrop(event)</b>, <b>ondrop</b> to <b>drop(event)</b>)
+                </td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>Geolocation</b></td>
+                <td colspan=3>
+                  Used to obtain user's geographical location, needs user's approbation<br>
+                  Used with <b>Javascript</b> :<br>
+                  <b>getCurentPosition()</b> - retrieves current location of user's device in either <b>Geodetic</b> (scientific) or <b>Civic</b> (common) way<br>
+                  <b>showLocation()</b> - defines callback method that retrieves location information<br>
+                  <b>ErrorHandler()</b> - method used when an error occurs in processing asynchronous call<br>
+                  <b>Options</b> - defines a set of options for retrieving the location information
+                </td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>Web storage</b></td>
+                <td colspan=3>
+                  Way to store date on user's computer<br>
+                  <b>Local storage</b> : stores data with no expiration data<br>
+                  <b>Session storage</b> : destroyed once the web browser is closed<br>
+                  Used with <b>Javascript</b> : <b>.setItem()</b> (stores a value), <b>.getItem()</b> (prints a value), <b>.removeItem()</b> (removes a value), <b>.clear()</b> (remove all values)
+                </td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>Named but forgotten in this course :(</b></td>
+                <td colspan=3><b>Offline Web Applications</b>, <b>History</b>, <b>Web Messaging</b></td>
+            </tr>
+
+            <tr>
+                <td colspan=4><br></td>
+            </tr>
+
+            <tr align=center bgcolor=#FFFF00>
+                <td><b>Content models</b></td>
+                <td colspan=3><b>Description</b></td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>Block elements</b></td>
+                <td colspan=3>Start from a new line<br>
+                  Can contain inline elements<br>
+                  Examples : <b>h1</b>, <b>form</b>, <b>li</b>, <b>ol</b>, <b>ul</b>, <b>p</b>, <b>pre</b>, <b>table</b>, <b>div</b>
+                </td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>Inline elements</b></td>
+                <td colspan=3>Displayed without line breaks<br>
+                  <b>CANNOT</b> contain block elements<br>
+                  Examples : <b>b</b>, <b>a</b>, <b>strong</b>, <b>img</b>, <b>input</b>, <b>em</b>, <b>span</b>, <b>ins</b>
+                </td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>Inline or block elements</b></td>
+                <td colspan=3>
+                  Some elements can be used either as block or inline<br>
+                  Examples : <b>applet</b>, <b>iframe <font color=#FF0000>(NOT IN HTML5)</font></b>, <b>ins</b>, <b>map</b>, <b>object</b>, <b>script</b>
+                </td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>Embedded<br><font color=#0000FF>(NEW IN HTML5)</font></b></td>
+                <td colspan=3>
+                  Imports other ressources into the document<br>
+                  Elements : <b>audio</b>, <b>video</b>, <b>canvas</b>, <b>iframe <font color=#FF0000>(NOT IN HTML5)</font></b>, <b>img</b>, <b>math</b>, <b>object</b>, <b>svg</b>
+                </td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>Flow content<br><font color=#0000FF>(NEW IN HTML5)</font></b></td>
+                <td colspan=3>
+                  Contains the majority of <b>HTML5</b>, elements that would be included in the normal flow of the document
+                </td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>Heading<br><font color=#0000FF>(NEW IN HTML5)</font></b></td>
+                <td colspan=3>
+                  Defines a section header<br>
+                  Elements : <b>h1</b>, <b>h2</b>, <b>h3</b>, <b>h4</b>, <b>h5</b>, <b>h6</b>, <b>hgroup</b>
+                </td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>Interactive<br><font color=#0000FF>(NEW IN HTML5)</font></b></td>
+                <td colspan=3>
+                  Content intended for user interaction<br>
+                  Elements : <b>a</b>, <b>audio</b>, <b>video</b>, <b>button</b>, <b>details</b>, <b>embed</b>, <b>iframe <font color=#FF0000>(NOT IN HTML5)</font></b>, <b>img</b>, <b>input</b>, <b>label</b>, <b>object</b>, <b>select</b>, <b>textarea</b>
+                </td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>Metadata<br><font color=#0000FF>(NEW IN HTML5)</font></b></td>
+                <td colspan=3>
+                  Sets up the presentation / behavior of the rest of the content / Found in the <b>&lt;head&gt;</b><br>
+                  Elements : <b>base</b>, <b>link</b>, <b>metal</b>, <b>noscript</b>, <b>script</b>, <b>style</b>, <b>title</b>
+                </td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>Phrasing<br><font color=#0000FF>(NEW IN HTML5)</font></b></td>
+                <td colspan=3>
+                  Inline elements, lot of common with <b>HTML4</b><br>
+                  Elements : <b>img</b>, <b>span</b>, <b>strong</b>, <b>label</b>, <b>br</b>, <b>small</b>, <b>sub</b>, <b>sub</b>, ... etc
+                </td>
+            </tr>
+
+            <tr align=center>
+                <td bgcolor=#00FF00><b>Sectioning<br><font color=#0000FF>(NEW IN HTML5)</font></b></td>
+                <td colspan=3>
+                  Defines the scope of headings<br>
+                  Elements : <b>article</b>, <b>aside</b>, <b>nav</b>, <b>section</b>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan=4><br></td>
+            </tr>
+
+            <tr align=center bgcolor=#FFFF00>
+                <td><b>Miscellaneous</b></td>
+                <td colspan=3><b>Description</b></td>
+              </tr>
+
+              <tr align=center>
+                  <td bgcolor=#00FF00><b>Canvas vs. SVG</b></td>
+                  <td>
+                    <b><u>Canvas</u></b><br>
+                    Elements are drawn programmatically<br>
+                    Drawings are done with pixels<br>
+                    Animations are not built in<br>
+                    High performance for pixels-based drawing operations<br>
+                    Resolution dependent<br>
+                    No support for event handlers<br>
+                    You can save the resulting image a .png or .jpg<br>
+                    Well suited for graphic intensuv games
+                  </td>
+                  <td>
+                    <b><u>SVG</u></b><br>
+                    Elements are part of the page's DOM (Document Object Model)<br>
+                    Drawing is done with vectors<br>
+                    Effects, such as animations are built in<br>
+                    Based on strandard XML syntax, which provides better accessibility<br>
+                    Resolution independent<br>
+                    Support for event handlers<br>
+                    Not suited for game applications<br>
+                    Best suited for applications with large rendering areas (like Google Maps)
+                  </td>
+                  <td>
+                    Both can be used on the same page<br><br>
+                    But <b>SVG</b> cannot be drawn in a <b>Canvas</b> or vice-versa
+                  </td>
+              </tr>
+
+              <tr align=center>
+                  <td bgcolor=#00FF00><b>CSS</b></td>
+                  <td colspan=3>
+                    Language used to style the document<br>
+                    If <b>HTML</b> defines the structure of the document, <b>CSS</b> defines its presentation<br>
+                    Usually written in a separate sheet but can be placed in an <b>HTML</b> document using the <b>style</b> attribute :<br>
+                    <b>&lt;div style="background-color:green; color:white; padding:20px;"&gt;&lt;/div&gt;</b><br>
+                    <div style="background-color:green; color:white; padding:20px;">Some text</div>
+                  </td>
+              </tr>
+
+              <tr align=center>
+                  <td bgcolor=#00FF00><b>HTML</b></td>
+                  <td colspan=3><b>H</b>yper<b>T</b>ext <b>M</b>arkup <b>L</b>anguage, not a programming language, not a scripting language either<br>
+                    Defines the structure of a website, uses tags to identify content
+                  </td>
+              </tr>
+
+              <tr align=center>
+                  <td bgcolor=#00FF00><b>Javascript</b></td>
+                  <td colspan=3>
+                    Programming language used to create dynamic pages<br>
+                    If <b>HTML</b> defines the structure of a document and <b>CSS</b> its presentation, <b>Javascript</b> defines its behavior<br>
+                    Usually written in a separate sheet but can be placed in a <b>HTML</b> document using the <b>script</b> tag<br>
+                    Used in canvas and API's
+                  </td>
+              </tr>
+
+
+              <tr align=center>
+                  <td bgcolor=#00FF00><b>UTF-8</b></td>
+                  <td colspan=3>Default character encoding of <b>HTML5</b></td>
+              </tr>
+
+              <tr align=center>
+                  <td bgcolor=#00FF00><b>.html</b> / <b>.htm</b></td>
+                  <td colspan=3>Possible extensions of an <b>HTML</b> file</td>
+              </tr>
+
+        </table>
+
+        <p><font color=#FF0000><b>(NOT IN HTML5)</b></font> = use <b>CSS</b> instead</p>
+
+        <p>Tags title with <b>&lt;&gt;</b> are those not requiring closing tags (like <b>&lt;img&gt;</b>)</p>
+
+    </body>
+
+</html>
